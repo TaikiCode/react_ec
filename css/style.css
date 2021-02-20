@@ -47,11 +47,14 @@ section .title::after{
 
 .max-width {
     max-width: 1300px;
-    padding: 0 80px;
     margin: auto;
 }
 
-
+.about .max-width,
+.products .max-width,
+.blog .max-width {
+    padding: 0 80px;
+}
 
 
 /* navbar styling */
@@ -125,15 +128,22 @@ nav.sticky .logo span {
 }
 
 .home .max-width{
-    margin: auto 0 auto 30px;
+    margin: auto 0 auto 15rem;
+}
+
+.home .home-content h2 {
+    font-size: 6.5rem;
+    font-style: italic;
+    font-family: 'Georgia';
 }
 
 
 
 /* about section styling */
-.about .title::after {
+/* .about .title::after {
     content: "who we are";
-}
+} */
+
 .about img {
     width: 85%;
 }
@@ -376,18 +386,33 @@ footer p {
 
 
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    nav .logo {
+        display: none;
+    }
+    .home .max-width {
+        margin-left: 0;
+    }
+    .home .home-content h2 {
+        font-size: 5rem;
+    }
     .about img {
         width: 100%;
     }
     .foto_1, .foto_2, .foto_3 {
         background-position: center;
         background-attachment: fixed;
-    }    
+    }   
+    .products .max-width {
+        padding: 0;
+    } 
     .products .col-md-3 img {
         height: 300px;
         width: auto;
     }    
+    .blog .max-width {
+        padding: 0 2rem;
+    }
 }
 
 
